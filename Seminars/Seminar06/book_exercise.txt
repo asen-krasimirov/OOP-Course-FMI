@@ -1,0 +1,229 @@
+#include <iostream>
+#include <cstring>
+#include <fstream>
+
+using namespace std;
+
+class Book {
+    char* title;
+    int pages;
+
+public:
+    Book(const char* book_title = "", int book_pages = 0) : pages(book_pages) {
+        size_t title_len = strlen(book_title);
+        title = new char[title_len + 1];
+        strcpy_s(title, title_len + 1, book_title);
+    }
+
+    ~Book() {
+        delete[] title;
+    }
+
+    Book(const Book& other) : pages(other.pages) {
+        size_t title_len = strlen(other.title);
+        title = new char[title_len + 1];
+        strcpy_s(title, title_len + 1, other.title);
+    }
+
+    Book& operator=(const Book& other) {
+        if (this != &other) {
+            delete[] title;
+
+            size_t title_len = strlen(other.title);
+            title = new char[title_len + 1];
+            strcpy_s(title, title_len + 1, other.title);
+
+            pages = other.pages;
+        }
+        return *this;
+    }
+
+    void display() const {
+        cout << "Title: " << title << ", Pages: " << pages << ::endl;
+    }
+
+    bool save_to_file(ofstream& out_file) const {
+        size_t titleLength = strlen(title) + 1;
+
+        if (!out_file.write((const char*)&titleLength, sizeof(titleLength))) {
+            return false;
+        }
+
+        if (!out_file.write(title, titleLength)) {
+            return false;
+        }
+
+        if (!out_file.write((const char*)&pages, sizeof(pages))) {
+            return false;
+        }
+
+        return true;
+    }
+
+    bool load_from_file(ifstream& in_file) {
+        size_t titleLength;
+        if (!in_file.read((char*)&titleLength, sizeof(titleLength))) {
+            return false;
+        }
+
+        delete[] title;
+        title = new char[titleLength];
+        if (!in_file.read(title, titleLength)) {
+            return false;
+        }
+
+        if (!in_file.read((char*)&pages, sizeof(pages))) {
+            return false;
+        }
+
+        return true;
+    }
+};
+
+class Bookshelf {
+    Book* books;
+    int capacity;
+    int count;
+
+public:
+    Bookshelf() : capacity(5), count(0) {
+        books = new Book[capacity];
+    }
+
+    Bookshelf(const char *file_name) {
+        std::ifstream in_file(file_name, std::ios::binary);
+
+        if (!in_file.is_open()) {
+            std::cerr << "Error opening file for reading." << endl;
+            return;
+        }
+
+        in_file.read((char*)&count, sizeof(count));
+
+        if (count > capacity) {
+            books = new Book[count];
+            capacity = count * 2;
+        }
+
+        for (int i = 0; i < count; i++) {
+            books[i].load_from_file(in_file);
+        }
+
+        in_file.close();
+    }
+
+    ~Bookshelf() {
+        delete[] books;
+    }
+
+    Bookshelf(const Bookshelf& other) : capacity(other.capacity), count(other.count) {
+        books = new Book[capacity];
+
+        for (int i = 0; i < count; i++) {
+            this->books[i] = other.books[i];
+        }
+    }
+
+    Bookshelf& operator=(const Bookshelf& other) {
+        if (this != &other) {
+            delete[] books;
+
+            capacity = other.capacity;
+            count = other.count;
+            books = new Book[capacity];
+
+            for (int i = 0; i < count; i++) {
+                this->books[i] = other.books[i];
+            }
+        }
+        return *this;
+    }
+
+    void add_book(const Book& book) {
+        if (count < capacity) {
+            books[count++] = book;
+        }
+        else {
+            std::cout << "Bookshelf is full!" << endl;
+        }
+    }
+
+    void display_books() const {
+        std::cout << "Bookshelf (" << count << " books):" << endl;
+
+        for (int i = 0; i < count; i++) {
+            books[i].display();
+        }
+    }
+
+    void save_to_file(const char* filename) const {
+        std::ofstream out_file(filename, std::ios::binary);
+
+        if (!out_file) {
+            std::cerr << "Error opening file for writing." << endl;
+            return;
+        }
+
+        out_file.write((const char*)&count, sizeof(count));
+     
+        for (int i = 0; i < count; i++) {
+            books[i].save_to_file(out_file);
+        }
+
+        out_file.close();
+    }
+};
+
+int main() {
+    Book book1("1984", 328);
+    Book book2("Brave New World", 311);
+
+    //ofstream out_file("books.dat", ios::binary);
+
+    //if (!out_file.is_open()) {
+    //    cout << "File did not open." << endl;
+    //    return 1;
+    //}
+
+    //book1.save_to_file(out_file);
+    //book2.save_to_file(out_file);
+
+    //out_file.close();
+
+    //// -------------------------------------------------------------
+
+    //ifstream in_file("books.dat", ios::binary);
+
+    //if (!in_file.is_open()) {
+        //cout << "File did not open." << endl;
+        //return 1;
+    //}
+
+    /*
+    Book loadedBook1, loadedBook2;
+
+    loadedBook1.load_from_file(in_file);
+    loadedBook2.load_from_file(in_file);
+    in_file.close();
+
+    cout << "Loaded from file:\n";
+    loadedBook1.display();
+    loadedBook2.display();
+    */
+
+    //Book loadedBook;
+
+    //while (loadedBook.load_from_file(in_file)) {
+        //loadedBook.display();
+    //}
+
+    Bookshelf bookshelf("books.dat");
+
+    //bookshelf.add_book(book1);
+
+    bookshelf.display_books();
+
+    //bookshelf.save_to_file("books.dat");
+
+    return 0;
+}
