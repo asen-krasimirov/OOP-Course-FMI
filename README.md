@@ -10,7 +10,8 @@
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar02">Семинар 02</a> - Потоци. Текстови файлове
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar03">Семинар 03</a> - Потоци. Двоични файлове
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar04">Семинар 04</a> - Член-функции. Жизнен цикъл на обекти
-  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar05">Семинар 05</a> - Голяма четворка. Енкапсулация. Абстракция
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar05">Семинар 05</a> - Копиращ конструктор. Оператор=. Енкапсулация. Абстракция
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar06">Семинар 06</a> - Голяма четворка.
   
 
 </pre>
