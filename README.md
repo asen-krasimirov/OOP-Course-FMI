@@ -12,7 +12,7 @@
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar04">Семинар 04</a> - Член-функции. Жизнен цикъл на обекти
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar05">Семинар 05</a> - Копиращ конструктор. Оператор=. Енкапсулация. Абстракция
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar06">Семинар 06</a> - Голяма четворка.
-   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar07">Семинар 07</a> - Разделна компилация. Приятелски функции. Предефиниране на оператори
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar07">Семинар 07</a> - Разделна компилация. Приятелски функции. Предефиниране на оператори
 
 </pre>
 
