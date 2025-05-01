@@ -18,9 +18,6 @@
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar10">Семинар 10</a> - Статично и динамично свързване. Полиморфизъм                            [NumbersFile]
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar11">Семинар 11</a> - Абстракен клас. Хетерогенен контейнер 				      [FruitStore]
 
-
-
-
 </pre>
 
 > [!NOTE]
