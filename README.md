@@ -17,6 +17,7 @@
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar09">Семинар 09</a> - Наследяване. Множествено наследяване                                    [Mage, MovieReview]
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar10">Семинар 10</a> - Статично и динамично свързване. Полиморфизъм                            [NumbersFile]
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar11">Семинар 11</a> - Абстракен клас. Хетерогенен контейнер 			 	         [FruitStore]
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar12">Семинар 12</a> - Move семантики. Exception Handling 			 	         [GameObject, Probe]
 
 </pre>
 
