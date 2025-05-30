@@ -17,14 +17,13 @@ public:
 int Resource::id_counter = 1;
 
 Resource::Resource(const my_string& n) : name(n), id(id_counter++) {
-    cout << "[Created] Resource '" << name << "' (ID: " << id << ")\n";
+    cout << "[Created] Resource '" << name << "' (ID: " << id << ")" << endl;
 }
 
 Resource::~Resource() {
-    cout << "[Destroyed] Resource '" << name << "' (ID: " << id << ")\n";
+    cout << "[Destroyed] Resource '" << name << "' (ID: " << id << ")" << endl;
 }
 
 void Resource::print() const {
-    cout << "Resource: " << name << " (ID: " << id << ")\n";
+    cout << "Resource: " << name << " (ID: " << id << ")" << endl;
 }
-
