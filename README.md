@@ -16,11 +16,11 @@
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar08">Семинар 08</a> - Статични елементи                                                       [my_string, Employee]
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar09">Семинар 09</a> - Наследяване. Множествено наследяване                                    [Mage, MovieReview]
   - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar10">Семинар 10</a> - Статично и динамично свързване. Полиморфизъм                            [NumbersFile]
-  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar11">Семинар 11</a> - Абстракен клас. Хетерогенен контейнер 			 	         [FruitStore]
-  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar12">Семинар 12</a> - Move семантики. Exception Handling 			 	         [GameObject, Probe]
-  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar13">Семинар 13</a> - Шаблони             			 	                         [my_queue]
-  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar14">Семинар 14</a> - Умни указатели             			 	                 [my_vector, my_unique_ptr, ResourceManager]
-  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar15">Семинар 15</a> - Design Patterns. STL Overview             			 	 [ConfigurationManager, StringBuilder]
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar11">Семинар 11</a> - Абстракен клас. Хетерогенен контейнер 			 	                     [FruitStore]
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar12">Семинар 12</a> - Move семантики. Exception Handling 			 	                     [GameObject, Probe]
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar13">Семинар 13</a> - Шаблони             			 	                                     [my_queue]
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar14">Семинар 14</a> - Умни указатели             			 	                             [my_vector, my_unique_ptr, ResourceManager]
+  - <a href="https://github.com/asen-krasimirov/OOP-Course-FMI/tree/2025/Seminars/Seminar15">Семинар 15</a> - Design Patterns. STL Overview             			 	                 [ConfigurationManager, StringBuilder]
 
 </pre>
 
